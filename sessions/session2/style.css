@@ -1,0 +1,26 @@
+* {
+    margin:0%;
+    padding:0%;
+    box-sizing: border-box;
+}
+
+.contaier {
+    background-color: rgb(173, 161, 161);
+}
+
+.card {
+    /* background-color: rgb(188, 165, 136); */
+    width: 24.5%;
+    text-align: center;
+    display: inline-block;
+    padding: 20px;
+}
+
+.card .layer {
+    background-color: rgb(188, 165, 136);
+}
+
+.card img {
+    width: 100%;
+
+}
