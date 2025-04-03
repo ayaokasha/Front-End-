@@ -15,7 +15,7 @@
 
 /* nav */
 .navbar {
-    z-index: 10;
+    z-index: 100;
     padding: 5px 0px;
     font-family: "Alegreya", serif;
     font-size: 18px;
@@ -76,7 +76,7 @@
 
 /* setting */
 .setting {
-     z-index: 10;
+    z-index: 100;
     width: 40px;
     height: 80px;
     position: fixed;
@@ -368,9 +368,11 @@
     font-weight: 300;
     display: flex;
     position: relative;
+    z-index: 10;
 }
 
 .footer .foot ul {
+    z-index: 10;
     list-style: none;
     color: #969696;
 }
@@ -404,6 +406,19 @@
     transition: 0.3s;
 }
 
+.footer .foot .details ul li a:hover {
+    color: white;
+    transition: 0.3s;
+}
+
+/* .footer .foot .details{
+    background-image: url(contact-details-map.png);
+    background-position:left ;
+    background-repeat: no-repeat;
+    background-size: 50%;
+    position: absolute;
+
+} */
 .footer .foot ul li p {
     color: #969696;
 }
@@ -415,16 +430,22 @@
     color: white;
 }
 
+.footer .foot a {
+    color: #969696;
+    text-decoration: none;
+}
+
 .footer .foot {
     float: left;
     width: 25%;
     padding: 10px;
 }
 
-.footer .foot img{
+.footer .foot img {
     position: absolute;
     opacity: 0.1;
-    top :200px;
+    top: 200px;
+    z-index: -1;
 }
 
 /* copyright */
