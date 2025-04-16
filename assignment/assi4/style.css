@@ -1,0 +1,868 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+.container {
+    width: 75%;
+    margin: auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+/* navbar */
+.navbar {
+    font-family: "Roboto", sans-serif;
+    padding-top: 15px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+}
+
+.navbar .container .nav ul {
+    display: flex;
+    justify-content: end;
+}
+
+.navbar .nav ul li a {
+    padding: 15px;
+    color: white;
+    font-size: 16px;
+    font-weight: 200;
+    transition: 0.5s;
+}
+
+.navbar .nav ul li a:hover {
+    color: rgba(255, 48, 91, 1);
+}
+
+.navbar .nav ul li a:active {
+    color: rgba(255, 48, 91, 1);
+}
+
+.navbar .container .brand a {
+    color: rgba(255, 48, 91, 1);
+    font-size: 24px;
+    font-weight: 800;
+    position: absolute;
+}
+
+/* home */
+
+.landing {
+    position: relative;
+    background-image: url(images/header.jpeg);
+    background-size: cover;
+    height: 100vh;
+
+}
+
+.landing .home {
+    display: flex;
+    color: white;
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    text-align: center;
+}
+
+.landing .home h1 {
+    font-size: 70px;
+    padding: 20px;
+    font-weight: 700;
+    color: rgba(255, 48, 91, 1);
+}
+
+.landing .home h3 {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.landing .home span {
+    font-size: 26px;
+
+    font-weight: 300;
+}
+
+/* about */
+
+.about .container {
+    display: flex;
+    padding: 100px 0 100px 0;
+}
+
+.about .about-img {
+    width: 35%;
+    border: solid 8px rgba(85, 85, 85, 1);
+    border-radius: 8px;
+
+}
+
+.about .about-img img {
+    display: block;
+    width: 100%;
+}
+
+.about .about-img .img-frame {
+    transform: translate(40px, 40px);
+    position: relative;
+    overflow: hidden;
+}
+
+.about .about-img .img-frame .frame {
+    position: absolute;
+    top: 120%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: 0.5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.about .about-img .img-frame .frame i {
+    font-size: 20px;
+    color: white;
+}
+
+.about .about-img .img-frame:hover .frame {
+    top: 0;
+}
+
+.about .about-text {
+    width: 65%;
+    padding: 0px 100px 0 150px;
+    text-decoration: none;
+}
+
+.about .about-text span {
+    font-size: 16px;
+    font-weight: 500;
+    color: rgba(51, 51, 51, 1);
+    font-family: "Roboto", sans-serif;
+}
+
+.about .about-text h3 {
+    font-size: 34px;
+    font-weight: 600;
+    color: rgba(51, 51, 51, 1);
+    position: relative;
+    padding-left: 10px;
+}
+
+.about .about-text h3::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 4px;
+    height: 100%;
+    background-color: rgba(255, 48, 91, 1);
+}
+
+.about .about-text p {
+    padding-top: 20px;
+    font-size: 16px;
+    font-weight: 400;
+    color: rgba(85, 85, 85, 1);
+    font-family: "Roboto", sans-serif;
+    line-height: 1.5;
+    position: relative;
+
+}
+
+.about .about-text p::after {
+    content: "";
+    color: rgba(85, 85, 85, 0.655);
+    position: absolute;
+    top: 110%;
+    right: 0;
+    width: 100%;
+    height: 1px;
+    background-image: repeating-linear-gradient(to right,
+            rgba(85, 85, 85, 0.655),
+            rgba(85, 85, 85, 0.655) 2px,
+            transparent 5px,
+            transparent 3px);
+}
+
+.about .about-text ul {
+    font-size: 20px;
+    padding: 50px 0px 20px 0;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.about .about-text ul li {
+    width: 50%;
+    font-size: 16px;
+    font-weight: 400;
+    color: rgba(85, 85, 85, 1);
+    font-family: "Roboto", sans-serif;
+    padding: 10px 10px 10px 0;
+}
+
+.about .about-text ul li a {
+    text-decoration: none;
+    color: rgba(85, 85, 85, 1);
+}
+
+.about .about-text button a {
+    text-decoration: none;
+    color: white;
+}
+
+.about .about-text button {
+    padding: 15px 20px;
+    margin-right: 10px;
+    background-color: rgba(255, 48, 91, 1);
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: "Roboto", sans-serif;
+}
+
+.about .about-text button:hover {
+    background-color: rgb(198, 51, 48);
+}
+
+/* servise */
+.services {
+    padding-top: 100px;
+    margin-top: 50px;
+    background-color: rgb(241, 241, 241);
+}
+
+.services .container .cards {
+    display: flex;
+    padding-bottom: 30px;
+    position: relative;
+}
+
+.services .container .cards::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: -35px;
+    transform: translateX(-50%);
+    height: 1px;
+    width: 100px;
+    background-color: rgba(255, 48, 91, 1);
+
+}
+
+.services .container .cards .card {
+    width: 33.33%;
+    padding-bottom: 30px;
+    margin: 10px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.services .container h2 {
+    text-align: center;
+    font-size: 35px;
+    font-weight: 800;
+    color: rgba(51, 51, 51, 1);
+    margin-bottom: 50px;
+    position: relative;
+
+}
+
+.services .container h2::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 115%;
+    transform: translateX(-50%);
+    height: 1px;
+    width: 200px;
+    background-color: rgba(255, 48, 91, 1);
+
+}
+
+.services .container h2::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 100%;
+    transform: translateX(-50%);
+    height: 1px;
+    width: 100px;
+    background-color: rgba(255, 48, 91, 1);
+
+}
+
+
+.services .container h3 {
+    font-size: 20px;
+    font-weight: 600;
+    padding: 10px;
+    color: rgba(51, 51, 51, 1);
+}
+
+.services .container .cards .card span {
+    font-size: 16px;
+    font-weight: 400;
+    color: rgba(85, 85, 85, 1);
+}
+
+.services .container .cards .card i {
+    font-size: 35px;
+    color: rgba(255, 48, 91, 1);
+    padding: 20px;
+    transition: 0.5s;
+}
+
+.services .container .cards .card:hover {
+    background-color: white;
+    box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.1);
+}
+
+.services .container .cards .card:hover i {
+    transform: scale(1.2);
+}
+
+/* portofilo */
+.portfolio {
+    padding-top: 50px;
+}
+
+.portfolio h2 {
+    text-align: center;
+    font-size: 35px;
+    font-weight: 800;
+    color: rgba(51, 51, 51, 1);
+    position: relative;
+}
+
+.portfolio h2::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 120%;
+    transform: translateX(-50%);
+    height: 1px;
+    width: 200px;
+    background-color: rgba(255, 48, 91, 1);
+
+}
+
+.portfolio h2::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 105%;
+    transform: translateX(-50%);
+    height: 1px;
+    width: 100px;
+    background-color: rgba(255, 48, 91, 1);
+}
+
+
+.portfolio ul {
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+    position: relative;
+}
+
+.portfolio ul::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 18px;
+    transform: translateX(-50%);
+    height: 1px;
+    width: 100px;
+    background-color: rgba(255, 48, 91, 1);
+}
+
+.portfolio ul li a {
+    padding: 20px;
+    font-size: 16px;
+    font-weight: 400;
+    color: rgba(51, 51, 51, 1);
+    transition: 0.5s;
+}
+
+.portfolio ul li a:active {
+    color: rgba(255, 48, 91, 1);
+}
+
+.portfolio ul li a:hover {
+    color: rgba(255, 48, 91, 1);
+}
+
+.portfolio .container .all-img {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: space-around;
+}
+
+.portfolio .all-img .img-card {
+    width: calc((100% - 60px) / 3);
+    display: block;
+    position: relative;
+    overflow: hidden;
+}
+
+.portfolio .all-img .img-card .shadow {
+    position: absolute;
+    inset: 120%;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: 0.03s;
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    gap: 10px;
+}
+
+.portfolio .all-img .img-card .shadow i {
+    font-size: 18px;
+    color: rgba(255, 48, 91, 1);
+    padding: 20px;
+}
+
+.portfolio .all-img .img-card:hover .shadow {
+    inset: 0;
+}
+
+.portfolio .all-img a img {
+    width: 100%;
+    display: block;
+}
+
+/* information */
+.information {
+    background-color: rgb(241, 241, 241);
+}
+
+.information .container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+    padding: 90px 0 90px 0;
+    text-align: center;
+}
+
+.information .container i {
+    font-size: 30px;
+    color: rgba(255, 48, 91, 1);
+    padding: 10px;
+}
+
+.information .container p {
+    font-size: 16px;
+    font-weight: 500;
+    color: rgba(85, 85, 85, 1);
+    padding: 10px;
+}
+
+.information .container span {
+    font-size: 26px;
+    font-weight: 600;
+    color: rgba(51, 51, 51, 1);
+    padding: 10px;
+}
+
+/* feedback */
+.feedback {
+    padding-top: 100px;
+}
+
+.feedback .client {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 100px 200px;
+    padding: 40px 40px;
+    gap: 40px;
+    background-color: rgb(241, 241, 241);
+}
+
+.feedback .container {
+    position: relative;
+}
+
+.feedback .container::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 59px;
+    transform: translateX(-50%);
+    height: 1px;
+    width: 100px;
+    background-color: rgba(255, 48, 91, 1);
+}
+
+.feedback h2 {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 800;
+    color: rgba(51, 51, 51, 1);
+    position: relative;
+}
+
+.feedback h2::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 105%;
+    transform: translateX(-50%);
+    height: 1px;
+    width: 100px;
+    background-color: rgba(255, 48, 91, 1);
+}
+
+.feedback h2::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 120%;
+    transform: translateX(-50%);
+    height: 1px;
+    width: 220px;
+    background-color: rgba(255, 48, 91, 1);
+
+}
+
+.feedback .client {
+    position: relative;
+    overflow: hidden;
+}
+
+
+
+.feedback .client .client-img {
+    padding: 20px;
+    position: relative;
+    z-index: 2;
+}
+
+.feedback .client::after {
+    position: absolute;
+    content: "";
+    transform: rotate(45deg);
+    top: -125px;
+    left: -60px;
+    height: 350px;
+    width: 200px;
+    background-color: rgba(255, 48, 91, 1);
+}
+
+.feedback .client .client-img img {
+    width: 100%;
+    border-radius: 50%;
+
+}
+
+.feedback .client .client-info h3 {
+    font-size: 26px;
+    font-weight: 600;
+    color: rgba(51, 51, 51, 1);
+    line-height: 1.5;
+    padding: 10px 0;
+}
+
+.feedback .client .client-info a {
+    font-size: 15px;
+    font-weight: 400;
+    color: rgba(119, 119, 119, 1);
+    line-height: 1.5;
+}
+
+.feedback .client .client-info p {
+    font-size: 15px;
+    font-weight: 400;
+    color: rgba(85, 85, 85, 1);
+    line-height: 1.5;
+    padding: 10px 0;
+}
+
+.feedback .client .client-info .rate i {
+    font-size: 15px;
+    color: gold;
+    line-height: 2;
+}
+
+/* blog */
+.blog {
+    padding: 100px 0;
+    background-color: rgb(241, 241, 241);
+}
+
+.blog h2 {
+    text-align: center;
+    font-size: 35px;
+    font-weight: 800;
+    color: rgba(51, 51, 51, 1);
+    position: relative;
+    padding-bottom: 50px;
+}
+
+.blog h2::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 54px;
+    transform: translateX(-50%);
+    height: 1px;
+    width: 60px;
+    background-color: rgba(255, 48, 91, 1);
+}
+
+.blog h2::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 60px;
+    transform: translateX(-50%);
+    height: 1px;
+    width: 120px;
+    background-color: rgba(255, 48, 91, 1);
+
+}
+
+.blog .post-container::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: -34px;
+    transform: translateX(-50%);
+    height: 1px;
+    width: 60px;
+    background-color: rgba(255, 48, 91, 1);
+}
+
+.blog h3 a {
+    font-size: 24px;
+    font-weight: 600;
+    color: rgba(51, 51, 51, 1);
+    transition: 0.5s;
+    line-height: 1.5;
+    padding: 15px;
+}
+
+.blog h3 a:hover {
+    color: rgba(255, 48, 91, 1);
+}
+
+.blog p {
+    font-size: 16px;
+    font-weight: 400;
+    color: rgba(85, 85, 85, 1);
+    line-height: 1.5;
+    padding: 15px 15px 0 15px;
+}
+
+.blog button {
+    border: none;
+    background-color: white;
+    padding: 15px;
+}
+
+.blog button a {
+    font-size: 16px;
+    font-weight: 400;
+    color: rgba(85, 85, 85, 1);
+    line-height: 1.5;
+}
+
+.blog .post-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    position: relative;
+}
+
+.blog .container .post {
+    width: calc((100% - 60px) / 3);
+    background-color: white;
+}
+
+.blog .container .post iframe {
+    width: 100%;
+}
+
+/* form */
+.conect {
+    padding: 90px 20px;
+}
+
+.conect .container h2 {
+    text-align: center;
+    font-size: 35px;
+    font-weight: 800;
+    color: rgba(51, 51, 51, 1);
+    position: relative;
+    padding-bottom: 50px;
+}
+
+.conect .container h2::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50px;
+    transform: translateX(-50%);
+    height: 1px;
+    width: 80px;
+    background-color: rgba(255, 48, 91, 1);
+}
+
+.conect .container h2::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 60px;
+    transform: translateX(-50%);
+    height: 1px;
+    width: 190px;
+    background-color: rgba(255, 48, 91, 1);
+
+}
+
+
+.conect .container {
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.conect .container::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 70px;
+    transform: translateX(-50%);
+    height: 1px;
+    width: 80px;
+    background-color: rgba(255, 48, 91, 1);
+}
+
+.conect .container form {
+    width: 100%;
+}
+
+.conect .container form .name {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.conect .container form .name input {
+    flex: 1;
+    min-width: 250px;
+    padding: 20px;
+    border: 2px solid rgb(169, 68, 66);
+    border-radius: 4px;
+    font-size: 15px;
+}
+
+.conect .container form input:focus {
+    border-color: rgb(169, 68, 66);
+    outline: none;
+    box-shadow: 0 0 5px rgb(169, 68, 66);
+}
+
+.conect .container form #subject {
+    width: 100%;
+    padding: 20px;
+    margin: 20px 0;
+    border: 2px solid rgb(169, 68, 66);
+    border-radius: 4px;
+    font-size: 15px;
+}
+
+.conect .container form #subject:focus {
+    border-color: rgb(169, 68, 66);
+    outline: none;
+    box-shadow: 0 0 5px rgb(169, 68, 66);
+}
+
+.conect .container form textarea {
+    width: 100%;
+    padding: 20px;
+    margin: 20px 0;
+    border: 2px solid rgb(169, 68, 66);
+    border-radius: 4px;
+    font-size: 15px;
+}
+
+.conect .container form textarea:focus {
+    border-color: rgb(169, 68, 66);
+    outline: none;
+    box-shadow: 0 0 5px rgb(169, 68, 66);
+}
+
+.conect .container form button {
+    background-color: rgba(255, 48, 91, 1);
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 400;
+    transition: 0.5s;
+}
+
+.conect .container form button:hover {
+    background-color: rgb(198, 51, 48);
+}
+
+/* copyright */
+.copyright {
+    background-color: rgb(51, 51, 51);
+    padding: 50px;
+}
+
+.copyright .container .contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.copyright i {
+    font-size: 20px;
+    color: white;
+    padding: 10px;
+}
+
+.copyright i:hover {
+    color: rgba(255, 48, 91, 1);
+}
+
+.copyright p {
+    text-align: center;
+    font-size: 16px;
+    font-weight: 400;
+    color: white;
+    padding: 10px;
+}
+
+.copyright p a {
+    color: rgba(255, 48, 91, 1);
+}
