@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.cards-wrrber {
+    background-color: aqua;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.cards-wrrber .card {
+    width: 100%;
+    background-color: lightblue;
+}
+
+.cards-wrrber .card img {
+    width: 100%;
+    display: block;
+}
+
+@media screen and (min-width:768px) {
+    .cards-wrrber .card {
+        width: 50%;
+    }
+}
+
+@media screen and (min-width:992px) {
+    .cards-wrrber .card {
+        width: 33.33%;
+    }
+}
