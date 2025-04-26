@@ -8,19 +8,26 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
     <title>Mealify</title>
 </head>
 
 <body>
     <nav>
-        <ul>
-            <li><a href="Mealify">Mealify <p>.</p></a></li>
-            <li><a href="Home">Home</a></li>
-            <li><a href="Chifs">Chifs</a></li>
-            <li><a href="Gallery">Gallery</a></li>
-            <li><a href="Contact">Contact</a></li>
-        </ul>
-        <button><i class="fa-solid fa-moon"></i></button>
+        <div class="container">
+            <h2><a href="Mealify">Mealify<span>.</span></a></h2>
+            <ul>
+                <li><a href="Home">Home</a></li>
+                <li><a href="Chifs">Chifs</a></li>
+                <li><a href="Gallery">Gallery</a></li>
+                <li><a href="Contact">Contact</a></li>
+            </ul>
+            <button><i class="fa-solid fa-moon"></i></button>
+        </div>
     </nav>
     <div class="landing">
         <div class="container">
@@ -29,8 +36,11 @@
                     Delicious Food</h2>
                 <p>Sed autem laudantium dolores. Voluptatem itaque ea consequatur eveniet. Eum quas beatae cumque eum
                     quaerat.</p>
-                <button><a href="book">Book a Table</a></button>
-                <button> <a href="video">Watch a Video</a></button>
+                <button class="b"><a href="book">Book a Table</a></button>
+                <button class="bt">
+                    <i class="fa-solid fa-play"></i>
+                    <a href="video">Watch a Video</a>
+                </button>
             </div>
             <div class="landing-img">
                 <img src="Mealify/hero-img.png" alt="landing-img">
@@ -38,60 +48,68 @@
         </div>
     </div>
     <div class="chefs">
-        <div class="container"></div>
         <p>CHEFS</p>
         <h2>Our <span>Proffesional</span> Chefs</h2>
-        <div class="chef-card">
-            <div class="chef-img">
-                <div class="chef-layer">
-                    <a href="facebook"><i class="fa-brands fa-facebook"></i></a>
-                    <a href="linkedin"><i class="fa-brands fa-linkedin"></i></a>
-                    <a href="twitter"><i class="fa-brands fa-twitter"></i></a>
-                    <a href="instagram"><i class="fa-brands fa-instagram"></i></a>
+        <div class="container">
+            <div class="chef-card">
+                <div class="chef-img">
+                    
+                    <img src="Mealify/chefs-1.jpg" alt="chef"><div class="chef-layer">
+                        <a href="facebook"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="linkedin"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="twitter"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="instagram"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
                 </div>
-                <img src="Mealify/chefs-1.jpg" alt="chef">
-            </div>
-            <h3>Walter White</h3>
-            <h4>Master Chef</h4>
-            <p>Velit aut quia fugit et et. Dolorum ea voluptate vel tempore tenetur ipsa quae aut. Ipsum
-                exercitationem
-                iure minima enim corporis et voluptate.</p>
-        </div>
-        <div class="chef-card">
-            <div class="chef-img">
-                <div class="chef-layer">
-                    <a href="facebook"><i class="fa-brands fa-facebook"></i></a>
-                    <a href="linkedin"><i class="fa-brands fa-linkedin"></i></a>
-                    <a href="twitter"><i class="fa-brands fa-twitter"></i></a>
-                    <a href="instagram"><i class="fa-brands fa-instagram"></i></a>
+                <div class="chef-txt">
+                    <h3>Walter White</h3>
+                    <h4>Master Chef</h4>
+                    <p>Velit aut quia fugit et et. Dolorum ea voluptate vel tempore tenetur ipsa quae aut. Ipsum
+                        exercitationem
+                        iure minima enim corporis et voluptate.</p>
                 </div>
-                <img src="Mealify/chefs-1.jpg" alt="chef">
             </div>
-            <h3>Walter White</h3>
-            <h4>Master Chef</h4>
-            <p>Velit aut quia fugit et et. Dolorum ea voluptate vel tempore tenetur ipsa quae aut. Ipsum
-                exercitationem
-                iure minima enim corporis et voluptate.</p>
-        </div>
-        <div class="chef-card">
-            <div class="chef-img">
-                <div class="chef-layer">
-                    <a href="facebook"><i class="fa-brands fa-facebook"></i></a>
-                    <a href="linkedin"><i class="fa-brands fa-linkedin"></i></a>
-                    <a href="twitter"><i class="fa-brands fa-twitter"></i></a>
-                    <a href="instagram"><i class="fa-brands fa-instagram"></i></a>
+            <div class="chef-card">
+                <div class="chef-img">
+
+                    <img src="Mealify/chefs-1.jpg" alt="chef">
+                    <div class="chef-layer">
+                        <a href="facebook"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="linkedin"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="twitter"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="instagram"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
                 </div>
-                <img src="Mealify/chefs-1.jpg" alt="chef">
+                <div class="chef-txt">
+                    <h3>Walter White</h3>
+                    <h4>Master Chef</h4>
+                    <p>Velit aut quia fugit et et. Dolorum ea voluptate vel tempore tenetur ipsa quae aut. Ipsum
+                        exercitationem
+                        iure minima enim corporis et voluptate.</p>
+                </div>
             </div>
-            <h3>Walter White</h3>
-            <h4>Master Chef</h4>
-            <p>Velit aut quia fugit et et. Dolorum ea voluptate vel tempore tenetur ipsa quae aut. Ipsum
-                exercitationem
-                iure minima enim corporis et voluptate.</p>
+            <div class="chef-card">
+                <div class="chef-img">
+
+                    <img src="Mealify/chefs-1.jpg" alt="chef">
+                    <div class="chef-layer">
+                        <a href="facebook"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="linkedin"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="twitter"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="instagram"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="chef-txt">
+                    <h3>Walter White</h3>
+                    <h4>Master Chef</h4>
+                    <p>Velit aut quia fugit et et. Dolorum ea voluptate vel tempore tenetur ipsa quae aut. Ipsum
+                        exercitationem
+                        iure minima enim corporis et voluptate.</p>
+                </div>
+            </div>
         </div>
     </div>
-    </div>
-    <div class="gallery">
+    <!-- <div class="gallery">
         <div class="container">
             <p>gallery</p>
             <h2>Check <span>Our Gallery</span></h2>
@@ -242,7 +260,7 @@
                         </ul>
             </div>
         </div>
-    </footer>
+    </footer> -->
 </body>
 
 </html>

@@ -8,10 +8,386 @@ body {
     font-family: sans-serif;
 }
 
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
 /* nav */
+nav {
+    padding-top: 15px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    background-color: white;
+    color: rgb(55, 55, 63);
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+}
+
+nav .container h2 a {
+    color: black;
+    font-weight: 600;
+}
+
+nav .container h2 span {
+    color: red;
+}
+
+nav .container ul li {
+    font-size: 16px;
+    font-weight: 200;
+    padding: 15px;
+}
+
+nav .container ul li a {
+    color: black;
+    font-weight: 600;
+    font-size: 16px;
+    transition: 0.5s;
+    position: relative;
+}
+
+nav ul li a::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    left: 0;
+    width: 0%;
+    bottom: -5px;
+    height: 2px;
+    background: rgb(140, 0, 0);
+    transition: 0.5s;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+nav button {
+    border: none;
+    font-size: 30px;
+    background: transparent;
+}
+
+
 /* landing */
+
+.landing {
+    background-color: rgb(238, 238, 238);
+}
+
+.landing .container {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+}
+
+.landing .container .landing-txt {
+    text-align: center;
+    margin-top: 20px;
+    padding-bottom: 30px;
+
+}
+
+.landing .container .landing-txt h2 {
+    font-family: "Amatic SC", sans-serif;
+    font-size: 65px;
+    font-weight: 700;
+    color: rgb(55, 55, 63);
+}
+
+.landing .container .landing-txt p {
+    font-size: 16px;
+    font-weight: 400;
+    color: rgb(79, 79, 90);
+    padding: 30px;
+}
+
+.landing .container .landing-txt .b {
+    background: rgb(189, 3, 3);
+    border-radius: 50px;
+    border: none;
+    padding: 13px 25px;
+
+}
+
+.landing .container .landing-txt .b:hover {
+    background-color: rgb(230, 20, 20);
+}
+
+.landing .container .landing-txt .b a {
+    color: rgba(255, 255, 255);
+    font-size: 15px;
+}
+
+.landing .container .landing-txt .bt {
+    background-color: transparent;
+    position: relative;
+    border-radius: 50px;
+    border: none;
+    padding: 15px 25px;
+
+}
+
+.landing .container .landing-txt .bt a {
+    color: rgb(55, 55, 63);
+    font-size: 15px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.landing .container .landing-txt .bt i {
+    color: rgb(55, 55, 63);
+    font-size: 18px;
+    padding: 20px;
+    z-index: 10;
+    position: relative;
+}
+
+.landing .container .landing-txt .bt:hover a {
+    color: rgb(189, 3, 3);
+}
+
+.landing .container .landing-txt .bt:hover i {
+    color: rgb(189, 3, 3);
+}
+
+.landing .container .landing-txt .bt::before {
+    content: "";
+    position: absolute;
+    background-color: rgb(255, 250, 250);
+    left: 24%;
+    top: 48%;
+    transform: translate(-50%, -50%);
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.landing .container .landing-txt .bt::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    background: rgb(189, 3, 3);
+    border-top-left-radius: 100%;
+    border-bottom-left-radius: 100%;
+    z-index: 0;
+}
+
+.landing .container .landing-img {
+    width: 100%;
+    padding-top: 100px;
+}
+
+.landing .container .landing-img img {
+    width: 100%;
+    display: block;
+}
+
+.landing .container .landing-img:hover {
+    animation: shake 0.5s infinite;
+}
+
+@keyframes shake {
+    0% {
+        transform: translate(0px, 0px);
+    }
+
+    20% {
+        transform: translate(-3px, 2px);
+    }
+
+    40% {
+        transform: translate(3px, -2px);
+    }
+
+    60% {
+        transform: translate(-2px, -3px);
+    }
+
+    80% {
+        transform: translate(2px, 3px);
+    }
+
+    100% {
+        transform: translate(0px, 0px);
+    }
+}
+
 /* chefs */
+
+.chefs {
+    text-align: center;
+    margin-top: 100px;
+}
+
+.chefs p {
+    padding: 5px;
+    font-size: 15px;
+    color: rgba(127, 127, 144, 1);
+    font-weight: 200;
+}
+
+.chefs h2 {
+    font-family: "Amatic SC", sans-serif;
+    font-size: 65px;
+    font-weight: 500;
+    color: rgb(55, 55, 63);
+    margin-bottom: 40px;
+}
+
+.chefs h2 span {
+    color: rgb(189, 3, 3);
+}
+
+.chefs .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.chefs .container .chef-card {
+    width: 100%;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: 0.5s;
+
+}
+
+.chefs .container .chef-card:hover {
+    transform: scale(1.03);
+}
+
+.chefs .container .chef-card img {
+    width: 100%;
+    display: block;
+}
+
+.chefs .container .chef-card .chef-txt {
+    padding: 20px;
+}
+
+.chefs .container .chef-card .chef-txt h3 {
+    padding: 5px;
+    font-size: 18px;
+    color: rgba(33, 37, 41, 1);
+    font-weight: 700;
+}
+
+
+.chefs .container .chef-card .chef-txt h4 {
+    padding: 5px;
+    font-size: 15px;
+    color: rgba(127, 127, 144, 1);
+    font-weight: 200;
+}
+
+.chefs .container .chef-card .chef-txt p {
+    padding: 5px;
+    font-size: 15px;
+    color: rgba(127, 127, 144, 1);
+    font-weight: 200;
+}
+
 /* gallery */
+
 /* contact */
+
 /* footer */
+
+
+
+
+
+
 /* media */
+
+/* nav media */
+
+@media screen and (min-width:768px) {
+    nav .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    nav .container ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+/* landing media */
+
+@media screen and (min-width:768px) {
+    .landing {
+        height: 100vh;
+        margin: auto;
+    }
+
+    .landing .container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .landing .container .landing-img {
+        width: 50%;
+        padding-top: 100px;
+    }
+
+    .landing .container .landing-txt {
+        text-align: center;
+        margin-top: 100px;
+        padding-bottom: 30px;
+        width: 40%;
+    }
+}
+
+/* chefs media */
+
+@media screen and (min-width:768px) {
+    .chefs .container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+
+    .chefs .container .chef-card {
+        width: calc(100% / 2 - 30px);
+    }
+}
+
+@media (min-width: 1025px) {
+    .chefs .container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+
+    .chefs .container .chef-card {
+        width: calc(100% / 3 - 30px);
+    }
+}
