@@ -1,0 +1,219 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Open Sans", sans-serif;
+    color: rgba(51, 51, 51, 1);
+}
+
+span {
+    font-family: "Montserrat", sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    color: rgb(159, 163, 167);
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-family: "Arvo", serif;
+    font-size: 40px;
+    font-weight: 400;
+    color: rgba(51, 51, 51, 1);
+    text-align: center;
+    margin: 10px;
+}
+
+a {
+    font-size: 14px;
+    font-weight: 400;
+    font-family: "Open Sans", sans-serif;
+}
+
+p {
+    font-size: 14px;
+    font-weight: 400;
+    font-family: "Open Sans", sans-serif;
+    color: rgb(167, 160, 159);
+    margin-bottom: 20px;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+.container {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+        "iphone iphone iphone iphone iphone iphone learn learn learn learn learn learn"
+        "iphone iphone iphone iphone iphone iphone learn learn learn learn learn learn"
+        "keyboard keyboard keyboard mac mac mac mac mac mac cloud cloud cloud"
+        "keyboard keyboard keyboard mac mac mac mac mac mac cloud cloud cloud"
+        "games  games  games  ibad ibad ibad ibad ibad ibad cloud cloud cloud"
+        "games  games  games  ibad ibad ibad ibad ibad ibad cloud cloud cloud"
+        "connect  connect  connect  pupular pupular pupular tv tv tv tv tv tv";
+}
+
+
+.learn {
+    grid-area: learn;
+    background-color: rgb(247, 248, 249);
+}
+
+/* .learn .learn-txt {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 20px;
+} */
+
+.learn .learn-txt a {
+    color: rgba(39, 185, 194, 1);
+
+}
+
+/* iphone */
+.iphone {
+    grid-area: iphone;
+}
+
+/* .iphone-card {
+    display: flex;
+    flex-direction: column;
+    padding-top: 50px;
+    padding-left: 20px;
+} */
+
+/* .iphone .iphone-txt {
+    width: 40%;
+} */
+
+.iphone .iphone-txt span {
+    text-transform: uppercase;
+}
+
+
+/* .iphone .iphone-img {
+    width: 60%;
+    align-self: center;
+} */
+
+
+
+/* keyboard */
+
+.keyboard {
+    background-color: rgba(240, 86, 56, 1);
+    margin: auto;
+    grid-area: keyboard;
+}
+
+/* .keyboard .key {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+} */
+
+/* .keyboard .key .key-txt {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+} */
+
+.keyboard .key .key-txt strong {
+    font-family: "Arvo", sans-serif;
+    font-size: 22px;
+    color: rgba(255, 251, 251, 1);
+    margin-bottom: 20px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.keyboard .key .key-txt a {
+    font-weight: 700;
+    color: rgba(255, 200, 10, 1);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* .keyboard .key .key-img {
+    width: 70%;
+} */
+
+
+
+/* games */
+.games {
+    grid-area: games;
+    background-color: rgb(247, 248, 249);
+}
+
+/* .games .game {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 20px;
+    margin: auto;
+} */
+
+/* .games .game .game-img {
+    width: 60%;
+} */
+
+
+
+/* .games .game .game-txt {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+} */
+
+.games .game .game-txt h2 {
+
+    text-align: center;
+}
+
+.games .game .game-txt a {
+    text-decoration: none;
+    font-weight: 700;
+    color: rgba(39, 185, 194, 1);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.mac {
+    grid-area: mac;
+
+}
+
+
+.ibad {
+    grid-area: ibad;
+    background-color: rgb(147, 182, 183);
+}
+
+.cloud {
+    grid-area: cloud;
+    background-color: rgb(143, 118, 188);
+}
+
+.pupular {
+    grid-area: pupular;
+    background-color: rgb(56, 213, 244);
+}
+
+.tv {
+    grid-area: tv;
+    background-color: rgb(44, 44, 44);
+}
