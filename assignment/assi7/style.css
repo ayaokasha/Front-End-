@@ -26,6 +26,10 @@ a {
     text-decoration: none;
 }
 
+p {
+    color: (78, 78, 78, 1)
+}
+
 .main-color {
     color: var(--main-color);
 }
@@ -40,9 +44,9 @@ ul {
     margin: 0;
 }
 
-/*^ global style*/
+/*^ end global style*/
 
-/*& === nav === */
+/*& === start nav === */
 .dropdown-submenu .dropdown-menu {
     display: none;
 }
@@ -89,10 +93,10 @@ ul {
     width: 100%;
 }
 
-/*& === nav === */
+/*& === end nav === */
 
 
-/*& === header === */
+/*! === start header === */
 .home {
     min-height: 100vh;
     background-image: url(DevFolio/hero-bg.jpg);
@@ -117,7 +121,111 @@ ul {
     font-weight: 600;
 }
 
+/*! === end header === */
 
 
 
-/*& === header === */
+
+/*& === start About me === */
+.about .container {
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.skill-txt p {
+    position: relative;
+}
+
+.skill-txt p::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 100%;
+    height: 15px;
+    background-color: rgb(205, 225, 248);
+}
+
+.skill-txt .h::before {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 85%;
+    height: 15px;
+    background-color: var(--main-color);
+    z-index: 1;
+}
+
+.skill-txt .c::before {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 75%;
+    height: 15px;
+    background-color: var(--main-color);
+    z-index: 1;
+}
+
+.skill-txt .p::before {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 50%;
+    height: 15px;
+    background-color: var(--main-color);
+    z-index: 1;
+}
+
+.skill-txt .j::before {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 90%;
+    height: 15px;
+    background-color: var(--main-color);
+    z-index: 1;
+}
+
+.about p {
+    color: rgba(78, 78, 78, 1);
+}
+
+.about span {
+    color: black;
+}
+
+.about-section h2 {
+    position: relative;
+}
+
+.about-section h2::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 20%;
+    height: 3px;
+    background-color: var(--main-color);
+}
+
+/*& === end About me === */
+
+
+/*! === start Services === */
+.services h2 {
+    font-size: 48px;
+    font-weight: 700;
+}
+
+.services p {
+    color: rgba(78, 78, 78, 1);
+}
+
+.services .card-container {
+    box-shadow: 1px 5px 5px  rgba(0, 0, 0, 0.2);
+}
+
+/*! === end Services === */
