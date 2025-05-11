@@ -65,12 +65,12 @@ ul {
     display: block;
 }
 
-.my-nav .navbar-nav>.nav-item>.nav-link {
+.my-nav .navbar-nav>.nav-item>.nav-link a{
     position: relative;
 
 }
 
-.my-nav .navbar-nav>.nav-item>.nav-link::after {
+.my-nav .navbar-nav>.nav-item>.nav-link a::after {
     content: "";
     position: absolute;
     bottom: 0;
@@ -81,11 +81,11 @@ ul {
     transition: width 0.5s linear;
 }
 
-.my-nav .navbar-nav>.nav-item>.nav-link:hover::after {
+.my-nav .navbar-nav>.nav-item>.nav-link:hover::after a {
     width: 100%;
 }
 
-.my-nav .navbar-nav>.nav-item>.nav-link.active::after {
+.my-nav .navbar-nav>.nav-item>.nav-link.active a::after {
     width: 100%;
 }
 
