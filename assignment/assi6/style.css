@@ -31,6 +31,7 @@ a {
     font-size: 14px;
     font-weight: 400;
     font-family: "Open Sans", sans-serif;
+    text-decoration: none;
 }
 
 p {
@@ -46,33 +47,25 @@ img {
     display: block;
 }
 
-.container {
-    height: 100vh;
+.grid-container {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-areas:
-        "iphone iphone iphone iphone iphone iphone learn learn learn learn learn learn"
-        "iphone iphone iphone iphone iphone iphone learn learn learn learn learn learn"
-        "keyboard keyboard keyboard mac mac mac mac mac mac cloud cloud cloud"
-        "keyboard keyboard keyboard mac mac mac mac mac mac cloud cloud cloud"
-        "games  games  games  ibad ibad ibad ibad ibad ibad cloud cloud cloud"
-        "games  games  games  ibad ibad ibad ibad ibad ibad cloud cloud cloud"
-        "connect  connect  connect  pupular pupular pupular tv tv tv tv tv tv";
+    grid-template-columns: repeat(4, 2fr);
 }
 
 
 .learn {
-    grid-area: learn;
     background-color: rgb(247, 248, 249);
+    grid-column-start: 1;
+    grid-column-end: 3;
+
 }
 
-/* .learn .learn-txt {
+.learn .learn-txt {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 50px 20px;
-} */
+}
 
 .learn .learn-txt a {
     color: rgba(39, 185, 194, 1);
@@ -81,29 +74,27 @@ img {
 
 /* iphone */
 .iphone {
-    grid-area: iphone;
-}
-
-/* .iphone-card {
-    display: flex;
-    flex-direction: column;
+    grid-column-start: 3;
+    grid-column-end: 5;
+   
     padding-top: 50px;
     padding-left: 20px;
-} */
+}
 
-/* .iphone .iphone-txt {
+
+.iphone .iphone-txt {
     width: 40%;
-} */
+}
 
 .iphone .iphone-txt span {
     text-transform: uppercase;
 }
 
 
-/* .iphone .iphone-img {
+.iphone .iphone-img {
     width: 60%;
     align-self: center;
-} */
+}
 
 
 
@@ -112,24 +103,24 @@ img {
 .keyboard {
     background-color: rgba(240, 86, 56, 1);
     margin: auto;
-    grid-area: keyboard;
+
 }
 
-/* .keyboard .key {
+.keyboard .key {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 40px 20px;
-} */
+}
 
-/* .keyboard .key .key-txt {
+.keyboard .key .key-txt {
     width: 40%;
     display: flex;
     flex-direction: column;
     align-items: center;
-} */
+}
 
-.keyboard .key .key-txt strong {
+* .keyboard .key .key-txt strong {
     font-family: "Arvo", sans-serif;
     font-size: 22px;
     color: rgba(255, 251, 251, 1);
@@ -145,39 +136,39 @@ img {
     text-transform: uppercase;
 }
 
-/* .keyboard .key .key-img {
+.keyboard .key .key-img {
     width: 70%;
-} */
+}
 
 
 
 /* games */
 .games {
-    grid-area: games;
+
     background-color: rgb(247, 248, 249);
 }
 
-/* .games .game {
+.games .game {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 50px 20px;
     margin: auto;
-} */
+}
 
-/* .games .game .game-img {
+.games .game .game-img {
     width: 60%;
-} */
+}
 
 
 
-/* .games .game .game-txt {
+.games .game .game-txt {
     width: 40%;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 20px;
-} */
+}
 
 .games .game .game-txt h2 {
 
@@ -192,28 +183,25 @@ img {
     text-transform: uppercase;
 }
 
-.mac {
-    grid-area: mac;
-
-}
+.mac {}
 
 
 .ibad {
-    grid-area: ibad;
+
     background-color: rgb(147, 182, 183);
 }
 
 .cloud {
-    grid-area: cloud;
+
     background-color: rgb(143, 118, 188);
 }
 
 .pupular {
-    grid-area: pupular;
+
     background-color: rgb(56, 213, 244);
 }
 
 .tv {
-    grid-area: tv;
+
     background-color: rgb(44, 44, 44);
 }

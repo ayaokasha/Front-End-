@@ -9,9 +9,6 @@
     box-sizing: border-box;
 }
 
-body {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
 
 h1,
 h2,
@@ -28,11 +25,11 @@ a {
 }
 
 p {
-    color: (78, 78, 78, 1)
+    color: rgba(78, 78, 78, 1);
 }
 
-.main-color {
-    color: var(--main-color);
+.bg-main-color {
+    background-color: var(--main-color);
 }
 
 .bg-gray {
@@ -65,12 +62,12 @@ ul {
     display: block;
 }
 
-.my-nav .navbar-nav>.nav-item>.nav-link a{
+.my-nav .navbar-nav>.nav-item>.nav-link {
     position: relative;
-
+    overflow: hidden;
 }
 
-.my-nav .navbar-nav>.nav-item>.nav-link a::after {
+.my-nav .navbar-nav>.nav-item>.nav-link::after {
     content: "";
     position: absolute;
     bottom: 0;
@@ -79,15 +76,17 @@ ul {
     height: 2px;
     background-color: var(--bg-gray);
     transition: width 0.5s linear;
+
 }
 
-.my-nav .navbar-nav>.nav-item>.nav-link:hover::after a {
+.my-nav .navbar-nav>.nav-item>.nav-link:hover::after {
     width: 100%;
 }
 
-.my-nav .navbar-nav>.nav-item>.nav-link.active a::after {
+.my-nav .navbar-nav>.nav-item>.nav-link.active::after {
     width: 100%;
 }
+
 
 
 /*& === end nav === */
@@ -100,6 +99,7 @@ ul {
     background-size: cover;
     background-position: center;
     position: relative;
+    background-attachment: fixed;
 
 }
 
@@ -284,6 +284,7 @@ ul {
     background-size: cover;
     position: relative;
     padding: 100px 0;
+    background-attachment: fixed;
 }
 
 .work::after {
@@ -379,15 +380,17 @@ ul {
 /*! === end portfolio === */
 
 /* ^====== start carousel ====== */
-.my-carousel {
+.carousel-sec {
+
     background-image: url(DevFolio/overlay-bg.jpg);
     background-size: cover;
     overflow: hidden;
     position: relative;
     padding: 150px 0;
+    background-attachment: fixed;
 }
 
-.my-carousel::after {
+.carousel-sec::after {
     content: "";
     position: absolute;
     inset: 0;
@@ -417,8 +420,163 @@ ul {
 }
 
 .my-carousel .carousel-indicators button {
-    width: 15px;
-    height: 15px;
+    width: 13px;
+    height: 13px;
     border-radius: 50%;
 }
+
+
 /* ^====== end carousel ====== */
+
+/* !===== start blog===== */
+.blog h2 {
+    font-size: 48px;
+    font-weight: 700;
+}
+
+.blog .blog-head p {
+    position: relative;
+    display: block;
+}
+
+.blog .blog-head p::after {
+    content: "";
+    position: absolute;
+    bottom: -60%;
+    left: 46%;
+    width: 50px;
+    height: 6px;
+    background-color: var(--main-color);
+}
+
+.blog .blog-img {
+    position: relative;
+    display: block;
+}
+
+.blog .blog-img span {
+    position: absolute;
+    bottom: -14px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 11px;
+    font-weight: 500;
+    padding: 10px;
+
+}
+
+
+.blog .card-footer p {
+    position: relative;
+}
+
+.blog .card-footer i {
+    position: absolute;
+    right: 70px;
+    bottom: 25px;
+    font-size: 17px;
+}
+
+.blog a {
+    text-decoration: none;
+    color: rgb(51, 51, 51);
+}
+
+.blog .card-footer {
+    box-shadow: 2px 4px 2px rgba(0, 0, 0, 0.1);
+}
+
+.blog .card-footer .footer-img img {
+    width: 35px;
+    height: 35px;
+}
+
+/* !===== end blog===== */
+.contact h3 {
+    font-size: 32px;
+    font-weight: 500;
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.contact h3::after {
+    content: "";
+    position: absolute;
+    bottom: -60%;
+    left: 0%;
+    width: 100px;
+    height: 4px;
+    background-color: var(--main-color);
+}
+
+.contact {
+    background-image: url(DevFolio/overlay-bg.jpg);
+    background-size: cover;
+    overflow: hidden;
+    position: relative;
+    padding: 150px 0;
+    background-attachment: fixed;
+    z-index: 1;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.contact::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgb(0, 120, 255, 0.6);
+    z-index: -1;
+}
+
+.contact .contact-txt ul i {
+    color: rgb(51, 147, 255);
+    padding-right: 5px;
+}
+
+.contact .contact-icon i {
+    position: relative;
+    padding: 20px;
+    z-index: 1;
+    transition: all 0.3s linear;
+    color: rgb(0, 0, 0);
+}
+
+.contact .contact-icon i::after {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 8px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 3px solid var(--main-color);
+    z-index: -1;
+    transition: all 0.3s linear;
+}
+
+.contact .contact-icon i:hover::after {
+    background-color: var(--main-color);
+}
+
+.contact .contact-icon i:hover:hover {
+    color: white;
+}
+
+.contact form button {
+    padding: 10px 20px;
+    font-size: 19px;
+    font-weight: 400;
+    transition: all 0.3s ease;
+}
+
+.contact form button:hover {
+    background-color: var(--main-color);
+    border: 4px solid var(--bg-blue-light);
+}
+
+
+
+/*! footer */
+footer {
+    background-color: rgb(0, 98, 211);
+}
