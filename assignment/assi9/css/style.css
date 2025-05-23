@@ -4,10 +4,13 @@
     box-sizing: border-box;
 }
 
-.container {
+section .q-container {
     background-color: rgb(243, 243, 224);
-    padding-top: 10px;
-    border-radius: 100px;
+    padding: 20px;
+    border-radius: 40px;
+    width: 70%;
+    max-width: 800px;
+    margin: 0 auto;
     box-shadow: 0 0 10px rgb(255, 255, 255);
 }
 
@@ -20,8 +23,8 @@ section {
     align-items: center;
 }
 
-section h1 {
-    font-size: 80px;
+section .q-container h1 {
+    font-size: 60px;
     font-weight: 700;
     font-family: Impact, 'Arial Narrow Bold', sans-serif;
     margin: 10px 0;
@@ -30,7 +33,7 @@ section h1 {
     display: inline-block;
 }
 
-section h1::after {
+section .q-container h1::after {
     content: '';
     position: absolute;
     display: block;
@@ -43,8 +46,8 @@ section h1::after {
     margin-top: 10px;
 }
 
-section h2 {
-    font-size: 35px;
+section .q-container h2 {
+    font-size: 25px;
     font-weight: 400;
     font-family: 'Times New Roman', Times, serif;
     margin: 10px 0;
@@ -52,7 +55,7 @@ section h2 {
     text-transform: capitalize;
 }
 
-section button {
+section .q-container button {
     background-color: rgb(72, 58, 160);
     width: 180px;
     height: 60px;
@@ -66,19 +69,52 @@ section button {
     transition: all 0.3s linear;
 }
 
-section button:hover {
+section .q-container button:hover {
     background-color: rgb(14, 33, 72);
     box-shadow: 0 0 10px rgb(14, 33, 72, 0.5);
     transform: scale(1.09);
 }
 
-section p {
-    font-size: 35px;
+section .q-container p {
+    font-size: 25px;
     font-weight: 400;
     font-family: 'Times New Roman', Times, serif;
     margin: 30px 0;
 }
 
-section i {
+section .q-container i {
     padding: 10px;
+}
+
+
+/* ~media queries */
+
+@media (min-width: 1200px) {
+
+    section .q-container {
+        width: 60%;
+        max-width: 1000px;
+    }
+}
+
+@media (max-width: 768px) {
+    section .q-container h1 {
+        font-size: 40px;
+    }
+
+    section .q-container h2,
+    section .q-container p {
+        font-size: 18px;
+    }
+
+    section .q-container {
+        width: 90%;
+        padding: 10px;
+    }
+
+    section .q-container button {
+        width: 150px;
+        height: 50px;
+        font-size: 16px;
+    }
 }

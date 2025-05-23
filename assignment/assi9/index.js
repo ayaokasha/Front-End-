@@ -22,6 +22,7 @@ function randomQuote() {
     alert("No quotes available.");
     return;
   }
+
   const index = Math.floor(Math.random() * quotes.length);
   const selectedQuote = quotes[index];
 
@@ -29,6 +30,7 @@ function randomQuote() {
     "quote"
   ).innerHTML = `<i class="fa-solid fa-quote-left"></i> 
   ${selectedQuote.text} <i class="fa-solid fa-quote-right"></i>`;
+
   document.getElementById("author").textContent = `– ${selectedQuote.author}`;
 
   quotes.splice(index, 1);
