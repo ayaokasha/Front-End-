@@ -1,0 +1,9 @@
+.content .content-form .form-control:focus {
+    box-shadow: none;
+    border-color: darkcyan !important;
+}
+
+title {
+    width: fit-content;
+    margin: auto;
+}
