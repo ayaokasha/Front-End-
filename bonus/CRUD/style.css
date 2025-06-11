@@ -1,4 +1,5 @@
-.content .content-form .form-control:focus {
+.content .content-form .form-control:focus,
+.insearch .form-control:focus {
     box-shadow: none;
     border-color: darkcyan !important;
 }
@@ -6,4 +7,8 @@
 title {
     width: fit-content;
     margin: auto;
+}
+
+.products .card img {
+    width: 100%;
 }
