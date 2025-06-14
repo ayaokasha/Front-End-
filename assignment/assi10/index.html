@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- ^fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&family=Pacifico&family=Righteous&display=swap"
+        rel="stylesheet">
+    <!-- ^fontawsome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- ^css -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>Bookmark</title>
+</head>
+
+<body>
+
+    <div class="page">
+        <div class="py-4">
+            <h1 class="mx-auto text-center py-5">Bookmarker</h1>
+        </div>
+
+
+        <section class="form-section">
+            <div>
+                <h2 class="mx-auto text-center py-3"><i class="fa-solid fa-bookmark"></i> Bookmark your favorite sites
+                    <i class="fa-solid fa-bookmark"></i>
+                </h2>
+            </div>
+
+            <div class="mb-3 w-75 mx-auto">
+                <label for="bookMark"><i class="fa-solid fa-book-bookmark"></i> Site Name</label>
+                <input type="text" class="form-control " id="bookMark" placeholder="Bookmark Name">
+
+            </div>
+            <div class="mb-3 w-75 mx-auto">
+                <label for="website"><i class="fa-solid fa-link"></i> Site URL</label>
+                <input type="url" class="form-control " id="website" placeholder="Website URL">
+            </div>
+
+
+            <div class="d-flex mx-auto justify-content-center">
+                <button onclick="addBook()" id="addBtn" class="btn my-3 px-5">Submit</button>
+            </div>
+
+        </section>
+
+
+        <section class="table-section">
+            <div class="container">
+                <div id="booksTable" class="row py-4 ">
+                    <!--  will be visble when the data send from js -->
+                    <div class="col-md-12">
+                        <table class="table text-center">
+
+                            <thead class="">
+                                <tr>
+                                    <th scope="col">Index</th>
+                                    <th scope="col">Website Name</th>
+                                    <th scope="col">Visit</th>
+                                    <th scope="col">Delete</th>
+                                </tr>
+                            </thead>
+                            <!-- data will apear here after user add it  -->
+                            <tbody id="tableBody">
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+
+
+
+    <!-- ^js -->
+    <script src="js/index.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

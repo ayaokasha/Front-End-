@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+::selection {
+    background-color: rgb(254, 194, 96);
+    color: #000;
+}
+
+.page {
+    background-color: rgb(247, 236, 222);
+    height: 100vh;
+}
+
+.page h1 {
+    display: block;
+    font-family: "Pacifico", cursive;
+    font-size: 50px;
+    line-height: 60px;
+    font-weight: 500;
+    color: rgba(53, 46, 40, 1);
+    position: relative;
+    z-index: 1;
+
+    padding-bottom: 5px;
+}
+
+.page h1::before {
+    content: "";
+    position: absolute;
+    background-color: rgb(254, 194, 96);
+    left: 50%;
+    bottom: 30%;
+    transform: translateX(-50%);
+    width: 27%;
+    height: 13%;
+    z-index: -1;
+    transition: height 0.3s;
+}
+
+.page h1:hover::before {
+    height: 25%;
+    transition: height 0.3s;
+}
+
+.page h2 {
+    font-family: "Righteous", sans-serif;
+    font-size: 25px;
+    line-height: 30px;
+    font-weight: 500;
+    background-image: linear-gradient(to left, #3ca55c, #b5ac49);
+    background-clip: text;
+    color: transparent;
+}
+
+.form-section {
+    position: relative;
+}
+
+form {
+    font-family: "PT Sans Caption", sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 600;
+}
+
+.form-section #bookmark:focus,
+.form-section #website:focus {
+    box-shadow: rgb(254, 194, 96) 0px 0px 5px;
+    border: rgb(254, 194, 96) 1px solid;
+
+}
+
+.form-section::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    border-bottom: 2px dotted currentColor;
+}
+
+.form-section::before {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    border-bottom: 2px dotted currentColor;
+}
+
+.form-section button {
+    background-color: #d1512d;
+    color: white;
+    border: #d1512d 1px solid;
+}
+
+.form-section button:hover {
+    background-color: #bb4120;
+    color: white;
+    border: #bb4120 1px solid;
+
+}
+
+.form-section button:active {
+    background-color: transparent !important;
+    color: black;
+    border: black 1px solid !important;
+}
+
+.table-section #visitBtn {
+    background-color: rgb(154, 177, 39);
+    border: rgb(154, 177, 39) 1px solid;
+}
+
+.table-section #visitBtn:hover {
+    background-color: rgb(138, 158, 35);
+    border: rgb(138, 158, 35) 1px solid;
+}
+
+.table-section #deleteBtn {
+    background-color: rgb(237, 16, 42);
+    border: rgb(237, 16, 42) 1px solid;
+}
+
+.table-section #deleteBtn:hover {
+    background-color: rgb(211, 8, 32);
+    border: rgb(211, 8, 32) 1px solid;
+}
+
+.table-section {
+    font-family: "PT Sans Caption", sans-serif;
+}
