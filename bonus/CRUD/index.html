@@ -7,6 +7,9 @@
     <!-- ^css -->
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- ^alert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
     <title>CRUD</title>
 </head>
 
@@ -14,27 +17,35 @@
 
     <!-- ^filds -->
     <section class="content py-5 mb-5">
-        <div class="title shadow p-1 mb-5 rounded-1">
-            <h2 class="text-center text-uppercase"><span class="text-info">e</span>lonsol
+        <div class="title p-1 mb-5 rounded-1">
+            <h2 class="text-center text-uppercase shadow"><span class="text-info">e</span>lonsol
                 <span class="text-info">s</span>tore
             </h2>
         </div>
 
         <div class="content-form w-75 mx-auto ">
+
             <div class="form-floating mb-3">
-                <input type="text" class="form-control border-0 border-bottom rounded-0" id="productName"
+                <input oninput="isInputValid(productRegex.nameRegex,this)" type="text"
+                    class="form-control border-0 border-bottom rounded-0" id="productName"
                     placeholder="name@example.com">
+                <p class="text-danger fw-light fs-6 d-none inputAlart">please enter a valid product name</p>
+
                 <label for="productName">product name</label>
             </div>
 
             <div class="form-floating mb-3">
-                <input type="number" class="form-control border-0 border-bottom rounded-0" id="productPrice"
+                <input oninput="isInputValid(productRegex.priceRegex,this)" type="number"
+                    class="form-control border-0 border-bottom rounded-0" id="productPrice"
                     placeholder="name@example.com">
+                <p class="text-danger fw-light fs-6 d-none inputAlart">please enter a valid product price</p>
+
                 <label for="productPrice">product price</label>
             </div>
 
             <div class="form-floating mb-3">
-                <select class="form-select border-0 border-bottom rounded-0" id="productCategory"
+                <select oninput="isInputValid(productRegex.categoryRegex,this)"
+                    class="form-select border-0 border-bottom rounded-0" id="productCategory"
                     aria-label="Floating label select example">
                     <option selected disabled hidden>choose a category</option>
                     <option>tv</option>
@@ -44,18 +55,23 @@
                     <option>printers</option>
                     <option>accessories</option>
                 </select>
+                <p class="text-danger fw-light fs-6 d-none inputAlart">please choose a valid product category</p>
+
                 <label for="productCategory">product category</label>
             </div>
 
             <div class="form-floating mb-3">
-                <textarea class="form-control border-0 border-bottom rounded-0" id="productDiscription"
+                <textarea oninput="isInputValid(productRegex.discriptionRegex,this)"
+                    class="form-control border-0 border-bottom rounded-0" id="productDiscription"
                     placeholder="name@example.com"></textarea>
+                <p class="text-danger fw-light fs-6 d-none inputAlart">please enter a valid product discription</p>
                 <label for="productDiscription">product Discription</label>
             </div>
 
             <div class="form-floating mb-3">
                 <input type="file" class="form-control border-0 border-bottom rounded-0" id="productImage"
                     placeholder="name@example.com">
+                <p class="text-danger fw-light fs-6 d-none inputAlart">please choose a valid product image</p>
                 <label for="productImage">product Image</label>
             </div>
 

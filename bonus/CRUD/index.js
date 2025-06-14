@@ -25,31 +25,51 @@ function addProuduct() {
   console.log();
 
   //to get the input from the user
-  var prouduct = {
-    name: productNameInput.value,
-    price: productPriceInput.value,
-    category: productCategoryInput.value,
-    discription: productDiscriptionInput.value,
-    //handling the image input
-    image:
-      productImageInput.files.length > 0
-        ? productImageInput.files[0].name
-        : "1.jpg", //default image
-  };
+  if (
+    isInputValid(productRegex.nameRegex, productNameInput) &&
+    isInputValid(productRegex.priceRegex, productPriceInput) &&
+    isInputValid(productRegex.categoryRegex, productCategoryInput) &&
+    isInputValid(productRegex.discriptionRegex, productDiscriptionInput) &&
+    isImageValid()
+  ) {
+    var prouduct = {
+      name: productNameInput.value,
+      price: productPriceInput.value,
+      category: productCategoryInput.value,
+      discription: productDiscriptionInput.value,
+      //handling the image input
+      image:
+        productImageInput.files.length > 0
+          ? productImageInput.files[0].name
+          : "1.jpg", //default image
+    };
+    //to push the product to the list
+    productList.push(prouduct);
 
-  //to push the product to the list
-  productList.push(prouduct);
+    //to display the product in the console
+    console.log(productList);
+    //save data to local storage
+    localStorage.setItem("allProducts", JSON.stringify(productList));
 
-  //to display the product in the console
-  console.log(productList);
-  //save data to local storage
-  localStorage.setItem("allProducts", JSON.stringify(productList));
+    //to display the products
+    displayProducts(productList);
 
-  //to display the products
-  displayProducts(productList);
-
-  //to clear the input fields
-  resetProuduct();
+    //to clear the input fields
+    resetProuduct();
+    //to show a success message
+    Swal.fire({
+      icon: "success",
+      title: "Product Added!",
+      showConfirmButton: false,
+      timer: 1500,
+    });
+  } else {
+    Swal.fire({
+      icon: "error",
+      title: "Oops...",
+      text: "Please fill all fields correctly!",
+    });
+  }
 }
 
 //^reset==========================
@@ -60,6 +80,12 @@ function resetProuduct() {
   productCategoryInput.value = "";
   productDiscriptionInput.value = "";
   productImageInput.value = "";
+  //to remove the validation classes
+  productNameInput.classList.remove("is-valid", "is-invalid");
+  productPriceInput.classList.remove("is-valid", "is-invalid");
+  productCategoryInput.classList.remove("is-valid", "is-invalid");
+  productDiscriptionInput.classList.remove("is-valid", "is-invalid");
+  productImageInput.classList.remove("is-valid", "is-invalid");
 }
 
 //^display==========================
@@ -177,5 +203,58 @@ function searchProducts(searchvalue) {
       // to display the filtered products
       displayProducts(filteredProducts);
     }
+  }
+}
+
+//^validation========================
+
+var productRegex = {
+  nameRegex: /^[A-Z][\sA-Za-z0-9]{2,}$/,
+  priceRegex: /^[1-9][0-9]{1,6}$/,
+  categoryRegex: /^(tv|phone|laptop|printers|accessories)$/,
+  discriptionRegex: /^[\sA-Za-z0-9].{2,}$/,
+};
+
+function isInputValid(regex, productInput) {
+  // to check if the product name is valid
+  if (regex.test(productInput.value)) {
+    //to add the valid class to the input field
+    productInput.classList.add("is-valid");
+    productInput.classList.remove("is-invalid");
+
+    //error message
+    productInput.nextElementSibling.classList.replace("d-none", "d-block");
+    productInput.nextElementSibling.classList.replace("d-block", "d-none");
+
+    return true;
+  } else {
+    productInput.classList.add("is-invalid");
+    productInput.classList.remove("is-valid");
+
+    //error message
+    productInput.nextElementSibling.classList.replace("d-block", "d-none");
+    productInput.nextElementSibling.classList.replace("d-none", "d-block");
+
+    return false;
+  }
+}
+
+//image validation
+
+function isImageValid() {
+  if (productImageInput.files.length > 0) {
+    productImageInput.classList.add("is-valid");
+    productImageInput.classList.remove("is-invalid");
+
+    productImageInput.nextElementSibling.classList.replace("d-none", "d-block");
+    productImageInput.nextElementSibling.classList.replace("d-block", "d-none");
+    return true;
+  } else {
+    productImageInput.classList.add("is-invalid");
+    productImageInput.classList.remove("is-valid");
+
+    productImageInput.nextElementSibling.classList.replace("d-block", "d-none");
+    productImageInput.nextElementSibling.classList.replace("d-none", "d-block");
+    return false;
   }
 }
