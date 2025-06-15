@@ -71,8 +71,8 @@ class="fa-solid fa-trash-can"></i>
  Delete</button></td>
 </tr>         
     `;
-    document.getElementById("tableBody").innerHTML = booksContainer;
   }
+  document.getElementById("tableBody").innerHTML = booksContainer;
 }
 
 //^visit====================
