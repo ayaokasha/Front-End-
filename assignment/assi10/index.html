@@ -17,10 +17,14 @@
     <!-- ^css -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- ^alert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
     <title>Bookmark</title>
 </head>
 
 <body>
+    <button id="toggleModeBtn">🌙</button>
 
     <div class="page">
         <div class="py-4">
@@ -37,12 +41,15 @@
 
             <div class="mb-3 w-75 mx-auto">
                 <label for="bookMark"><i class="fa-solid fa-book-bookmark"></i> Site Name</label>
-                <input type="text" class="form-control " id="bookMark" placeholder="Bookmark Name">
-
+                <input oninput="isValid(inputRegex.name,this)" type="text" class="form-control " id="bookMark"
+                    placeholder="Bookmark Name">
+                <p class="text-danger fw-light d-none">please enter a valid name</p>
             </div>
             <div class="mb-3 w-75 mx-auto">
                 <label for="website"><i class="fa-solid fa-link"></i> Site URL</label>
-                <input type="url" class="form-control " id="website" placeholder="Website URL">
+                <input oninput="isValid(inputRegex.url,this)" type="url" class="form-control " id="website"
+                    placeholder="Website URL">
+                <p class="text-danger fw-light d-none">please enter a valid URL</p>
             </div>
 
 
