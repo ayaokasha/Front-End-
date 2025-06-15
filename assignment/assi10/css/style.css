@@ -25,10 +25,11 @@ body {
     font-family: "Pacifico", cursive;
     font-size: 50px;
     font-weight: 500;
-    color: rgba(53, 46, 40, 1);
+    color: rgba(53, 46, 40);
     position: relative;
     z-index: 1;
     padding-bottom: 5px;
+    text-shadow: 1px 1px 3px rgba(62, 36, 10, 0.5);
 }
 
 .page h1::before {
@@ -166,12 +167,22 @@ form {
     padding: 8px 16px;
     border: none;
     border-radius: 8px;
-    background-color: #452d0b;
+    background-color: #38250a;
     color: #1e1e1e;
     font-weight: bold;
     cursor: pointer;
     z-index: 9999;
     transition: all 0.3s ease-in-out;
+}
+
+body.dark-mode #toggleModeBtn {
+    background-color: #ffc670;
+    color: #1e1e1e;
+}
+
+body.dark-mode #toggleModeBtn:hover,
+#toggleModeBtn:hover {
+    background-color: #97550e;
 }
 
 body.dark-mode {
@@ -185,6 +196,7 @@ body.dark-mode .page {
 
 body.dark-mode .page h1 {
     color: #806640;
+    text-shadow: 2px 1px 5px wheat;
 }
 
 body.dark-mode .form-section button {
@@ -206,29 +218,6 @@ body.dark-mode .form-control.is-invalid {
     border-color: #ff5252 !important;
 }
 
-body.dark-mode #toggleModeBtn {
-    background-color: #ffc670;
-    color: #1e1e1e;
-}
-
-#toggleModeBtn {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    padding: 8px 16px;
-    border: none;
-    border-radius: 8px;
-    background-color: #ffb347;
-    color: #1e1e1e;
-    font-weight: bold;
-    cursor: pointer;
-    z-index: 9999;
-    transition: all 0.3s ease-in-out;
-}
-
-#toggleModeBtn:hover {
-    background-color: #fda94f;
-}
 
 body.dark-mode .table-section {
     background-color: #1e1e1e;
@@ -251,14 +240,6 @@ body.dark-mode table td {
 body.dark-mode table th {
     background-color: #3a3a3a;
     color: #ffc670;
-}
-
-body.dark-mode table tr:nth-child(even) {
-    background-color: #333;
-}
-
-body.dark-mode table tr:nth-child(odd) {
-    background-color: #2a2a2a;
 }
 
 body.dark-mode #visitBtn {
