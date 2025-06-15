@@ -24,12 +24,10 @@ body {
     display: block;
     font-family: "Pacifico", cursive;
     font-size: 50px;
-    line-height: 60px;
     font-weight: 500;
     color: rgba(53, 46, 40, 1);
     position: relative;
     z-index: 1;
-
     padding-bottom: 5px;
 }
 
